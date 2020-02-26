@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/client_create_client"
+          android:title="@string/create_new_client"
+          android:orderInCategory="100"
+          android:icon="@drawable/ic_add_toolbar"
+          app:showAsAction="always"/>
+
+    <!-- 24dp / 3dp padding -->
+    <item android:id="@+id/client_search"
+          android:title="@string/search"
+          android:icon="@drawable/ic_search"
+          app:showAsAction="ifRoom"/>
+
+</menu>

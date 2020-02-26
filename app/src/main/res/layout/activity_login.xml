@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_form"
+        tools:context="com.envilabindonesia.android.ui.login.LoginActivity"
+        android:background="@android:color/white">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/splash_logo"/>
+
+        <Space android:layout_width="match_parent" android:layout_height="30dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                style="@style/BaseTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    style="@style/TextViewNormalBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:id="@+id/etEmail"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                app:passwordToggleEnabled="true"
+                style="@style/BaseTextInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    style="@style/TextViewNormalBlack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:id="@+id/etPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Space android:layout_width="match_parent" android:layout_height="20dp"/>
+
+        <include
+                android:id="@+id/include_button"
+                layout="@layout/loading_button_blue"/>
+
+        <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnForgotPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewSmallBlack"
+                android:text="@string/forgot_password"
+                android:padding="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                tools:ignore="UnusedAttribute"/>
+
+        <Space android:layout_width="match_parent" android:layout_height="40dp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+                                                      android:layout_height="wrap_content"
+                                                      android:orientation="horizontal"
+                                                      android:gravity="center_vertical">
+
+            <View android:layout_width="wrap_content" android:layout_height="1dp"
+                  android:layout_weight="1"
+                  android:background="@color/edittext_line"/>
+
+            <androidx.appcompat.widget.AppCompatTextView android:layout_width="wrap_content"
+                                                         android:layout_height="wrap_content"
+                                                         style="@style/TextViewNormalBlack"
+                                                         android:text="@string/registration"
+                                                         android:paddingLeft="10dp"
+                                                         android:paddingRight="10dp"/>
+
+            <View android:layout_width="wrap_content" android:layout_height="1dp"
+                  android:layout_weight="1"
+                  android:background="@color/edittext_line"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <Space android:layout_width="match_parent" android:layout_height="20dp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/ButtonGreen"
+                    android:text="@string/btn_partner"
+                    android:id="@+id/btnRegPartner"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRegCompany"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/ButtonRed"
+                    android:layout_weight="1"
+                    android:text="@string/btn_company"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

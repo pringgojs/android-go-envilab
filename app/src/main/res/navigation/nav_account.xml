@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/account" app:startDestination="@id/profileFragment">
+
+    <fragment android:id="@+id/profileFragment"
+              android:name="com.envilabindonesia.android.ui.account.profile.ProfileFragment"
+              android:label="ProfileFragment"
+              tools:layout="@layout/fragment_profile"/>
+
+    <fragment android:id="@+id/passwordFragment"
+              android:name="com.envilabindonesia.android.ui.account.password.PasswordFragment"
+              android:label="PasswordFragment"
+              tools:layout="@layout/fragment_password"/>
+
+    <fragment android:id="@+id/uploadFragment"
+              android:name="com.envilabindonesia.android.ui.account.upload.UploadFragment"
+              android:label="UploadFragment"
+              tools:layout="@layout/fragment_upload"/>
+
+</navigation>

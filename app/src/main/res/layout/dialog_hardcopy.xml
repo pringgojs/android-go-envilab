@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextViewBigBlack"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/test_result_hardcopy"
+            android:gravity="center"
+            app:fontPath="@string/path_font_robot_bold"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/padding_form">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewNormalGray"
+                android:text="@string/vendor"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVendor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewNormalBlack"
+                android:text="@string/test_result_hardcopy"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/padding_form"
+            android:layout_marginBottom="@dimen/padding_form">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewNormalGray"
+                android:text="@string/resi_number"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvResi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextViewNormalBlack"
+                android:textColor="@color/button_red"
+                android:text="@string/test_result_hardcopy"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCopy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ButtonBlue"
+            android:text="@string/copy_resi"/>
+
+</LinearLayout>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:fillViewport="false">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusableInTouchMode="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_form">
+
+                <ProgressBar
+                        android:id="@+id/progressbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:indeterminate="true"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:visibility="gone"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/layout_company"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_square">
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvDate"
+                                style="@style/TextViewSmallGray"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5 November 2019"
+                                android:textSize="10sp"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvNumber"
+                                style="@style/TextViewSmallGray"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="123/2019/x91vva"
+                                android:gravity="end"
+                                android:paddingLeft="@dimen/padding_line"
+                                android:textSize="10sp"
+                                android:layout_toRightOf="@+id/tvDate"/>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvName"
+                                android:layout_toLeftOf="@+id/tvPrice"
+                                style="@style/TextViewSmallBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="PT. Media Baru Digital"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCity"
+                                style="@style/TextViewSmallGray"
+                                android:textColor="@color/textview_black_2"
+                                android:layout_toLeftOf="@+id/tvPrice"
+                                android:layout_below="@+id/tvName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Surabaya, Jawa Timur"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPrice"
+                                style="@style/TextViewNormalBlackOneLine"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="5dp"
+                                android:text="2,700,000"
+                                android:textColor="@color/button_red"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"/>
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.chip.Chip
+                            android:id="@+id/chipStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/SearchChip"
+                            app:chipStartPadding="25dp"
+                            app:chipEndPadding="25dp"
+                            android:textColor="@android:color/white"
+                            android:layout_margin="@dimen/padding_form"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layoutNotes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="7.5dp"
+                        android:padding="10dp"
+                        android:background="@drawable/bg_square"
+                        android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewSmallBlack"
+                            android:text="@string/label_notes_order"
+                            android:textColor="@color/button_red"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNotes"
+                            style="@style/TextViewSmallGray"
+                            android:textColor="@color/textview_black_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/listProgress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="7.5dp"/>
+
+                <ViewFlipper
+                        android:id="@+id/vf_quotaion_invoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                        <include
+                                android:id="@+id/include_quotation"
+                                layout="@layout/layout_share_quotation"
+                                android:visibility="gone"/>
+
+                        <include
+                                android:id="@+id/include_invoice"
+                                layout="@layout/layout_share_invoice"
+                                android:visibility="gone"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <include
+                        layout="@layout/loading"/>
+
+                </ViewFlipper>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSubtitleService"
+                        style="@style/TextViewNormalBlack"
+                        android:text="@string/services_company_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:paddingBottom="10dp"/>
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="1dp"
+                      android:background="@color/edittext_line"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginBottom="5dp"
+                        android:paddingBottom="10dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnEdit"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/padding_line"
+                        android:layout_height="wrap_content"
+                        style="@style/ButtonGreen"
+                        android:text="@string/button_edit"
+                        android:visibility="gone"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/vf_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                    <ViewFlipper
+                            android:id="@+id/vf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <include
+                                android:id="@+id/include_button_result"
+                                layout="@layout/loading_button_green"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btnRetry"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/ButtonRed"
+                                android:text="@string/try_again"
+                                android:layout_gravity="center"/>
+
+                    </ViewFlipper>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnReview"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/padding_line"
+                            android:layout_height="wrap_content"
+                            style="@style/ButtonBlue"
+                            android:text="@string/button_review"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

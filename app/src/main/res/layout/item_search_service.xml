@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:padding="@dimen/recyclerview_separator"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                style="@style/TextViewNormalBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Udara Ambient"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRegulation"
+                style="@style/TextViewSmallBlackOneLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Pergub Jatim 10/2009 (Ambient)"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvParameter"
+                style="@style/TextViewSmallGray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="SO2, CO, NO2, O3, Debu, Pb, H2S, NH3, HC"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPrice"
+                style="@style/TextViewNormalBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_red"
+                tools:text="Rp 750.000"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

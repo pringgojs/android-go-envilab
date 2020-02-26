@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/account" app:startDestination="@id/trainingVideoFragment">
+
+    <fragment android:id="@+id/trainingVideoFragment"
+              android:name="com.envilabindonesia.android.ui.training.TrainingVideoFragment"
+              android:label="TrainingVideoFragment"
+              tools:layout="@layout/fragment_training_video"/>
+
+    <fragment android:id="@+id/trainingPdfFragment"
+              android:name="com.envilabindonesia.android.ui.training.TrainingPdfFragment"
+              android:label="TrainingPdfFragment"
+              tools:layout="@layout/fragment_training_pdf"/>
+
+</navigation>

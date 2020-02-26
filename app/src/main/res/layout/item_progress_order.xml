@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_schedule"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_square"
+            android:padding="10dp"
+            android:layout_marginBottom="7.5dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNameSchedule"
+                style="@style/TextViewSmallGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDateSchedule"
+                style="@style/TextViewSmallGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textview_black_2"
+                android:gravity="end"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

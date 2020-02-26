@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+                                               android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_form">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@mipmap/ic_launcher_round"
+                        android:contentDescription="@string/nav_header_desc"
+                        android:id="@+id/ivProfile"
+                        android:layout_gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextViewBigBlack"
+                        android:layout_gravity="center"
+                        tools:text="Galih Adityo"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layoutCompany"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/company_name"
+                            style="@style/BaseTextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etCompanyName"
+                                style="@style/TextViewNormalBlackOneLine"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/btnAddCompany"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_add"
+                            android:padding="5dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email"
+                        style="@style/BaseTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmail"
+                            style="@style/TextViewNormalBlackOneLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+                                                              android:layout_height="wrap_content"
+                                                              android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            style="@style/BaseTextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                style="@style/TextViewNormalBlack"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="phone"
+                                android:text="@string/phone_area_id"
+                                android:enabled="false"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/mobile_phone"
+                            style="@style/BaseTextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etMobilePhone"
+                                style="@style/TextViewNormalBlackOneLine"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="phone"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/address"
+                        style="@style/BaseTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etAddress"
+                            style="@style/TextViewNormalBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:maxLines="2"
+                            android:ellipsize="end"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ViewFlipper
+                        android:id="@+id/vfProvinces"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/province"
+                            style="@style/BaseTextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etProvinces"
+                                style="@style/TextViewNormalBlackOneLine"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <include
+                            layout="@layout/loading_small"/>
+
+                </ViewFlipper>
+
+                <ViewFlipper
+                        android:id="@+id/vfRegency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layoutRegency"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/regency"
+                            style="@style/BaseTextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etRegencies"
+                                style="@style/TextViewNormalBlackOneLine"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <include
+                            layout="@layout/loading_small"/>
+
+                </ViewFlipper>
+
+                <ViewFlipper
+                        android:id="@+id/vfDistricts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layoutDistricts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/districts"
+                            style="@style/BaseTextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etDistricts"
+                                style="@style/TextViewNormalBlackOneLine"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <include
+                            layout="@layout/loading_small"/>
+
+                </ViewFlipper>
+
+                <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                <include
+                        android:id="@+id/include_button_profile"
+                        layout="@layout/loading_button_green"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

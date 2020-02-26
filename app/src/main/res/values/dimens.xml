@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="padding_form">15dp</dimen>
+    <dimen name="padding_line">5dp</dimen>
+    <dimen name="margin_legend">5dp</dimen>
+    <dimen name="icon_legend">10dp</dimen>
+    <dimen name="recyclerview_separator">10dp</dimen>
+    <dimen name="design_navigation_icon_size" tools:override="true">14dp</dimen>
+    <dimen name="upload_width">300dp</dimen>
+    <dimen name="upload_height">120dp</dimen>
+    <dimen name="padding_chip_group">10dp</dimen>
+    <dimen name="video_width">300dp</dimen>
+    <dimen name="video_height">120dp</dimen>
+    <dimen name="chip_spacing">15dp</dimen>
+    <dimen name="corners_top_menu">5dp</dimen>
+    <dimen name="menu_top_margin">10dp</dimen>
+</resources>

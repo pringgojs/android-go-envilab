@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/padding_form">
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/reason"
+            style="@style/BaseTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etReason"
+                style="@style/TextViewNormalBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:maxLines="4"
+                android:ellipsize="end"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--<Space android:layout_width="match_parent"-->
+           <!--android:layout_height="10dp"/>-->
+
+    <!--<androidx.appcompat.widget.LinearLayoutCompat-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+        <!--<androidx.appcompat.widget.AppCompatButton-->
+                <!--android:id="@+id/btnSubmit"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_marginTop="@dimen/padding_line"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--style="@style/ButtonGreen"-->
+                <!--android:text="@string/submit"/>-->
+
+        <!--<androidx.appcompat.widget.AppCompatButton-->
+                <!--android:id="@+id/btnCancel"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_marginTop="@dimen/padding_line"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--style="@style/ButtonRed"-->
+                <!--android:text="@string/cancel"/>-->
+
+    <!--</androidx.appcompat.widget.LinearLayoutCompat>-->
+
+</LinearLayout>

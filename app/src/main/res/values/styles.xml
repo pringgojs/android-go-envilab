@@ -1,0 +1,245 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="TextViewSubtitleBoldBlack" parent="TextViewBlack">
+        <item name="fontPath">@string/path_font_robot_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextViewToolbarTitle" parent="android:TextAppearance">
+        <item name="fontPath">@string/path_font_robot_regular</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextViewNavigation">
+        <item name="fontPath">@string/path_font_robot_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextViewBlack">
+        <item name="android:textColor">@color/textview_black</item>
+    </style>
+
+    <style name="TextViewGray">
+        <item name="android:textColor">@color/textview_gray</item>
+    </style>
+
+    <style name="TextViewWhite">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextViewBigBlack" parent="TextViewBlack">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextViewBigBlackOneLine" parent="TextViewBigBlack">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TextViewBigWhite" parent="TextViewWhite">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextViewBigGray" parent="TextViewGray">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextViewNormalWhite" parent="TextViewWhite">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextViewSmallWhite" parent="TextViewWhite">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextViewNormalBlack" parent="TextViewBlack">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextViewNormalBlackOneLine" parent="TextViewNormalBlack">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TextViewNormalGray" parent="TextViewGray">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextViewNormalGrayOneLine" parent="TextViewNormalGray">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TextViewSmallGray" parent="TextViewGray">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextViewSmallGrayOneLine" parent="TextViewSmallGray">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TextViewSmallBlack" parent="TextViewBlack">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextViewSmallBlackOneLine" parent="TextViewSmallBlack">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    
+    <style name="BottomMenu">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:layout_margin">7.5dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TopMenuMitra" parent="BottomMenu">
+        <item name="android:background">@drawable/btn_icon_menu_top_mitra</item>
+    </style>
+
+    <style name="TopMenuCompany" parent="BottomMenu">
+        <item name="android:background">@drawable/btn_icon_menu_top_company</item>
+    </style>
+
+    <style name="ThemeTextInputLayout" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColorHint">@color/textview_gray</item>
+        <item name="colorAccent">@color/textview_gray</item>
+        <item name="colorControlNormal">@color/textview_gray</item>
+        <item name="colorControlActivated">@color/textview_gray</item>
+    </style>
+
+    <style name="BaseTextInputLayout">
+        <item name="android:theme">@style/ThemeTextInputLayout</item>
+    </style>
+
+    <style name="BaseButton" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    
+    <style name="BaseButtonGreen" parent="BaseButton">
+        <item name="colorButtonNormal">@color/button_green</item>
+    </style>
+
+    <style name="BaseButtonRed" parent="BaseButton">
+        <item name="colorButtonNormal">@color/button_red</item>
+    </style>
+
+    <style name="BaseButtonBlue" parent="BaseButton">
+        <item name="colorButtonNormal">@color/button_blue</item>
+    </style>
+
+    <style name="ButtonGreen">
+        <item name="android:theme">@style/BaseButtonGreen</item>
+    </style>
+
+    <style name="ButtonRed">
+        <item name="android:theme">@style/BaseButtonRed</item>
+    </style>
+
+    <style name="ButtonBlue">
+        <item name="android:theme">@style/BaseButtonBlue</item>
+    </style>
+
+    <style name="SearchDropdown" parent="TextViewNormalBlack">
+        <item name="android:drawableRight">@drawable/ic_arrow_down</item>
+        <item name="android:drawableEnd">@drawable/ic_arrow_down</item>
+        <item name="android:drawablePadding">@dimen/padding_line</item>
+    </style>
+
+    <style name="ripple">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+    
+    <style name="chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:checkable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="chipBackgroundColor">@color/chip_selector_blue</item>
+        <item name="chipStrokeColor">@color/image_taken</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/chip_selector_blue_text</item>
+        <item name="android:textSize">12sp</item>
+        <item name="chipStartPadding">5dp</item>
+        <item name="chipEndPadding">5dp</item>
+    </style>
+
+    <style name="SingleChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:checkable">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="chipStartPadding">5dp</item>
+        <item name="chipEndPadding">5dp</item>
+    </style>
+
+    <style name="SingleChipSmall" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStartPadding">2.5dp</item>
+        <item name="chipEndPadding">2.5dp</item>
+        <item name="chipMinHeight">0dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingTop">2.5dp</item>
+        <item name="android:paddingBottom">2.5dp</item>
+    </style>
+
+    <style name="TextAppearanceSingleChipSmall" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="SearchChip" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ScheduleDay" parent="TextViewSmallBlack">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet_round_top</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowSoftInputMode">stateAlwaysHidden|adjustResize</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog"/>
+
+    <style name="ShadowMenuTop">
+
+    </style>
+
+</resources>

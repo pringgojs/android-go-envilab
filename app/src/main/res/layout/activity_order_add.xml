@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/tvUncompleteDoc"
+                android:animateLayoutChanges="true">
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/company_name"
+                    style="@style/BaseTextInputLayout"
+                    android:paddingTop="@dimen/padding_form"
+                    android:paddingBottom="12.5dp"
+                    android:paddingLeft="@dimen/padding_form"
+                    android:paddingRight="@dimen/padding_form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tvCompany"
+                        style="@style/TextViewNormalBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/choose_company"
+                        android:paddingTop="5dp"
+                        android:background="@null"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/edittext_line"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name_contact_person"
+                    style="@style/BaseTextInputLayout"
+                    android:paddingTop="12.5dp"
+                    android:paddingBottom="12.5dp"
+                    android:paddingLeft="@dimen/padding_form"
+                    android:paddingRight="@dimen/padding_form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tvContactPerson"
+                        style="@style/TextViewNormalBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/choose_contact_person"
+                        android:paddingTop="5dp"
+                        android:background="@null"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/edittext_line"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_notes_order"
+                    style="@style/BaseTextInputLayout"
+                    android:paddingTop="12.5dp"
+                    android:paddingBottom="12.5dp"
+                    android:paddingLeft="@dimen/padding_form"
+                    android:paddingRight="@dimen/padding_form">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNotes"
+                        style="@style/TextViewNormalBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:background="@null"
+                        android:inputType="textMultiLine"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/edittext_line"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                        style="@style/TextViewNormalBlack"
+                        android:id="@+id/tvServices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/picked_services"
+                        android:textColor="@color/textview_black"
+                        android:background="@null"
+                        android:paddingTop="12.5dp"
+                        android:paddingBottom="12.5dp"
+                        android:paddingLeft="@dimen/padding_form"
+                        android:paddingRight="@dimen/padding_form"
+                        android:drawableRight="@drawable/ic_arrow_right"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/edittext_line"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUncompleteDoc"
+                style="@style/TextViewSmallBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/button_red"
+                android:gravity="center_vertical|end"
+                android:padding="10dp"
+                android:text="@string/complete_doc"
+                android:background="@color/bg_chip_2"
+                app:layout_constraintBottom_toTopOf="@+id/footer"
+                android:visibility="gone"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:paddingLeft="@dimen/padding_form"
+                android:paddingRight="@dimen/padding_form"
+                android:paddingTop="@dimen/padding_line"
+                android:paddingBottom="@dimen/padding_line"
+                android:background="@color/gray_bottom_menu">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPriceTotal"
+                    style="@style/TextViewBigBlackOneLine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/padding_form"
+                    android:layout_marginEnd="@dimen/padding_form"
+                    android:textColor="@color/button_red"
+                    android:layout_gravity="center_vertical"
+                    app:fontPath="@string/path_font_robot_bold"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center|end">
+
+                <ViewFlipper
+                        android:id="@+id/vfButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <include
+                            layout="@layout/loading"/>
+
+                    <include
+                            android:id="@+id/include_button_create"
+                            layout="@layout/loading_button_green"/>
+
+                    <include
+                            android:id="@+id/include_button_edit"
+                            layout="@layout/loading_button_green"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="false"
+                            android:enabled="false"
+                            android:text="@string/order_add"/>
+
+
+                </ViewFlipper>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

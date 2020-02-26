@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/menu_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <com.dd.ShadowLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sl_shadowRadius="@dimen/corners_top_menu"
+            app:sl_shadowColor="@color/top_menu_shadow"
+            app:sl_dx="0dp"
+            app:sl_dy="2dp"
+            app:sl_cornerRadius="@dimen/corners_top_menu">
+
+        <!--android:layout_margin="@dimen/menu_top_margin"-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/menu_top_mitra"
+                android:padding="7.5dp">
+
+            <!-- 150px -->
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_p_create_order"
+                    style="@style/TopMenuMitra"
+                    android:text="@string/menu_top_create_order"
+                    android:drawableTop="@drawable/ic_order_new"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_p_create_company"
+                    style="@style/TopMenuMitra"
+                    android:text="@string/menu_top_create_company"
+                    android:drawableTop="@drawable/ic_company_new"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_p_schedule_sampling"
+                    style="@style/TopMenuMitra"
+                    android:text="@string/menu_top_schedule_sampling"
+                    android:drawableTop="@drawable/ic_schedule_sampling"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_p_notification"
+                    android:layout_height="match_parent"
+                    style="@style/TopMenuMitra"
+                    android:text="@string/menu_notif"
+                    android:drawableTop="@drawable/ic_top_menu_notif"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.dd.ShadowLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout_selected_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/btnItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_form"
+            android:paddingRight="@dimen/padding_form"
+            android:paddingTop="@dimen/padding_form"
+            android:paddingBottom="5dp"
+            android:gravity="center_vertical"
+            style="@style/ripple">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRegulation"
+                style="@style/TextViewSmallBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingRight="10dp"
+                tools:text="PT. Media Baru Digital"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_down"
+                android:visibility="gone"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <!--android:background="@color/bg_chip_2"-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/imgArrow"
+            android:paddingLeft="@dimen/padding_form"
+            android:paddingRight="@dimen/padding_form"
+            android:paddingBottom="@dimen/padding_form"
+            android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvParameter"
+                style="@style/TextViewSmallGray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Sos, H20, N2"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPrice"
+                style="@style/TextViewSmallGray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="75000"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

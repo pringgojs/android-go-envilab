@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextViewBigBlack"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            app:fontPath="@string/path_font_robot_bold"
+            tools:text="Quotation/Invoice"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            style="@style/BaseTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                style="@style/TextViewNormalBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/doc_number"
+            style="@style/BaseTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNumber"
+                style="@style/TextViewNormalBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:enabled="false"
+                android:clickable="false"
+                android:textColor="@color/textview_gray"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space android:layout_width="match_parent" android:layout_height="25dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/ButtonBlue"
+            android:text="@string/choice_send"
+            android:textAllCaps="true"/>
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        tools:context=".ui.verification.VerificationActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_dark"
+            android:padding="@dimen/padding_form"
+            android:layout_gravity="right"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+                                                  android:layout_height="wrap_content"
+                                                  android:orientation="vertical"
+    android:padding="@dimen/padding_form">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewBigBlack"
+                android:text="@string/verification_code"
+                android:layout_gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewNormalGray"
+                android:text="@string/verification_send"
+                android:layout_gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewNormalBlack"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAccent"
+                tools:text="galihadityo@gmail.com"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+
+        <com.poovam.pinedittextfield.SquarePinField
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="16sp"
+                app:cornerRadius="0dp"
+                app:noOfFields="4"
+                app:highlightColor="@color/edittext_line"
+                app:fieldColor="@color/edittext_line"
+                android:textSelectHandle="@drawable/text_handle"
+                android:id="@+id/etVerifyCode"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+        <Space android:layout_width="wrap_content"
+               android:layout_height="30dp"/>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+            <ViewFlipper
+                    android:id="@+id/vfResend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTimer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextViewBigBlackOneLine"
+                        android:padding="10dp"
+                        tools:text="00:00"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@color/textview_gray"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/ButtonRed"
+                        android:text="@string/resend"
+                        android:id="@+id/btnResend"/>
+
+                <include
+                        layout="@layout/loading"/>
+
+            </ViewFlipper>
+
+            <LinearLayout
+                    android:id="@+id/loadSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="gone">
+
+                <include
+                        layout="@layout/loading"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

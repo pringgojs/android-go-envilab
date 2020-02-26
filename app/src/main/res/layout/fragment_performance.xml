@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/swipe">
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_chip_2"
+                    android:padding="@dimen/padding_form"
+                    android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMonth"
+                        style="@style/TextViewNormalGray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        tools:text="Mei, 2019"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTotal"
+                        style="@style/TextViewBigBlackOneLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="20sp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="2.5dp"
+                        android:text="@string/dash"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewSmallGray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/revenue_remarks"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_form"
+                    android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layoutOrderSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:background="@drawable/bg_square"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewNormalGray"
+                            android:text="@string/submitted_orders"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="5dp"
+                            android:paddingEnd="5dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOrderSubmited"
+                            style="@style/TextViewNormalBlack"
+                            android:gravity="end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@string/dash"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layoutOrderComplete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:background="@drawable/bg_square"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewNormalGray"
+                            android:text="@string/completed_orders"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="5dp"
+                            android:paddingEnd="5dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOrderCompleted"
+                            style="@style/TextViewNormalBlack"
+                            android:gravity="end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@string/dash"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <RelativeLayout
+                        android:id="@+id/layoutOrderRevenue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:background="@drawable/bg_square"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewNormalGray"
+                            android:text="@string/potential_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOrderRevenue"
+                            style="@style/TextViewNormalBlackOneLine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/button_red"
+                            android:text="@string/dash"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLabelRevenue"
+                            style="@style/TextViewSmallGray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvOrderRevenue"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:paddingTop="5dp"
+                            android:textSize="9sp"/>
+
+                </RelativeLayout>
+
+                <include
+                        android:id="@+id/includeChart"
+                        layout="@layout/layout_chart"
+                        android:visibility="gone"/>
+
+                <include
+                        android:id="@+id/includeChartBar"
+                        layout="@layout/layout_chart_bar"
+                        android:visibility="gone"/>
+
+                <include
+                        android:id="@+id/includeChartLine"
+                        layout="@layout/layout_chart_line"
+                        android:visibility="gone"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

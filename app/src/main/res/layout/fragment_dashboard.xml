@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.envilabindonesia.android.base.view.OnlyVerticalSwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_form">
+
+                <ViewFlipper
+                        android:id="@+id/vf_menu_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true">
+
+                    <include
+                            android:id="@+id/v_menu_bottom_partner"
+                            layout="@layout/menu_bottom_partner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    <include
+                            android:id="@+id/v_menu_bottom_company"
+                            layout="@layout/menu_bottom_company"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                </ViewFlipper>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextViewSubtitleBoldBlack"
+                        android:text="@string/menu_performance"
+                        android:paddingTop="@dimen/padding_form"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/BaseTextInputLayout"
+                        android:paddingBottom="5dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tvMonth"
+                            style="@style/SearchDropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/choose_month"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layoutOrderSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:background="@drawable/bg_square"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewNormalGray"
+                            android:text="@string/submitted_orders"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="5dp"
+                            android:paddingEnd="5dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOrderSubmited"
+                            style="@style/TextViewNormalBlack"
+                            android:gravity="end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@string/dash"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layoutOrderComplete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:background="@drawable/bg_square"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewNormalGray"
+                            android:text="@string/completed_orders"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="5dp"
+                            android:paddingEnd="5dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOrderCompleted"
+                            style="@style/TextViewNormalBlack"
+                            android:gravity="end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="@string/dash"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layoutOrderTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:background="@drawable/bg_square"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewNormalGray"
+                            android:text="@string/total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOrderTotal"
+                            style="@style/TextViewNormalBlackOneLine"
+                            android:gravity="end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/button_red"
+                            android:text="@string/dash"/>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layoutOrderRevenue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:background="@drawable/bg_square"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextViewNormalGray"
+                            android:text="@string/potential_income"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOrderRevenue"
+                            style="@style/TextViewNormalBlackOneLine"
+                            android:gravity="end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/button_red"
+                            android:text="@string/dash"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layoutListOrder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/TextViewSubtitleBoldBlack"
+                                android:text="@string/menu_order"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/btnSeeAll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/see_all"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/blue_link"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <!--<com.envilabindonesia.android.base.view.MeasuredViewPager-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/viewpager"/>-->
+
+                <include
+                        android:id="@+id/includeChart"
+                        layout="@layout/layout_chart"/>
+
+                <include
+                        android:id="@+id/layoutChild"
+                        layout="@layout/layout_supervisor_partner"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.envilabindonesia.android.base.view.OnlyVerticalSwipeRefreshLayout>
+
+</RelativeLayout>

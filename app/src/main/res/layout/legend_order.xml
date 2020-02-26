@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="@dimen/icon_legend"
+                android:layout_height="@dimen/icon_legend"
+                android:layout_margin="@dimen/margin_legend"
+                android:background="@drawable/status_request"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewSmallGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/legend_request"
+                android:textSize="10sp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="@dimen/icon_legend"
+                android:layout_height="@dimen/icon_legend"
+                android:layout_margin="@dimen/margin_legend"
+                android:background="@drawable/status_sampling"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewSmallGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/legend_sampling"
+                android:textSize="10sp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="@dimen/icon_legend"
+                android:layout_height="@dimen/icon_legend"
+                android:layout_margin="@dimen/margin_legend"
+                android:background="@drawable/status_complete"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextViewSmallGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/legend_complete"
+                android:textSize="10sp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout_selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ripple">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/imgDelete"
+            android:paddingLeft="@dimen/padding_form"
+            android:paddingRight="@dimen/padding_form"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                style="@style/TextViewNormalBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Udara Ambient"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRegulation"
+                style="@style/TextViewSmallBlackOneLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Pergub Jatim 10/2009 (Ambient)"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvParameter"
+                style="@style/TextViewSmallGrayOneLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="SO2, CO, NO2, O3, Debu, Pb, H2S, NH3, HC"
+                android:paddingBottom="5dp"/>
+
+        <ViewFlipper
+                android:id="@+id/vf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layout_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:numStars="5"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvUserRating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextViewSmallBlack"
+                        tools:text="Galih Adito"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDateRating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextViewSmallGray"
+                        android:textSize="10sp"
+                        tools:text="25 Mei 2019, 04:05:10"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/TextViewSmallBlack"
+                        android:paddingRight="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="5dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/TextViewSmallBlack"
+                    android:textColor="@color/button_red"
+                    android:text="@string/give_review"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:gravity="bottom|end"/>
+
+        </ViewFlipper>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

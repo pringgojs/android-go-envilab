@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/padding_form"
+        android:paddingBottom="@dimen/padding_form">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextViewNormalBlack"
+            android:layout_marginTop="@dimen/padding_form"
+            android:paddingLeft="@dimen/padding_form"
+            android:paddingRight="@dimen/padding_form"
+            tools:text="Ambient Udara"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextViewSmallGray"
+            android:paddingLeft="@dimen/padding_form"
+            android:paddingRight="@dimen/padding_form"
+            android:textColor="@color/textview_black_2"
+            tools:text="Ambient Udara"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/edittext_line"
+            android:layout_marginTop="@dimen/padding_form"
+            android:layout_marginBottom="@dimen/padding_form"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_order_notes"
+            style="@style/BaseTextInputLayout"
+            android:paddingLeft="@dimen/padding_form"
+            android:paddingRight="@dimen/padding_form"
+            android:layout_marginBottom="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNotes"
+                style="@style/TextViewNormalBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:background="@null"
+                android:paddingTop="10dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/edittext_line"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="@dimen/padding_form"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/padding_form"
+            android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_minus_blue"
+                android:padding="10dp"
+                android:background="@drawable/btn_icon"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextViewBigBlack"
+                android:gravity="center"
+                android:minEms="2"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_plus_blue"
+                android:padding="10dp"
+                android:background="@drawable/btn_icon"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_form"
+            android:layout_marginRight="@dimen/padding_form"
+            style="@style/ButtonBlue"
+            android:text="@string/save"/>
+
+</LinearLayout>

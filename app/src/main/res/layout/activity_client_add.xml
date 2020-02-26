@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+                                           android:layout_height="match_parent"
+                                           app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+                                                      android:layout_height="match_parent"
+                                                      android:orientation="vertical"
+        android:padding="@dimen/padding_form">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/company_name"
+                    style="@style/BaseTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCompanyName"
+                        style="@style/TextViewNormalBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/address"
+                    style="@style/BaseTextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAddress"
+                        style="@style/TextViewNormalBlack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ViewFlipper
+                    android:id="@+id/vfProvinces"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/province"
+                        style="@style/BaseTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etProvinces"
+                            style="@style/TextViewNormalBlackOneLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <include
+                        layout="@layout/loading_small"/>
+
+            </ViewFlipper>
+
+            <ViewFlipper
+                    android:id="@+id/vfRegency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutRegency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/regency"
+                        style="@style/BaseTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etRegencies"
+                            style="@style/TextViewNormalBlackOneLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <include
+                        layout="@layout/loading_small"/>
+
+            </ViewFlipper>
+
+            <ViewFlipper
+                    android:id="@+id/vfDistricts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/layoutDistricts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/districts"
+                        style="@style/BaseTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etDistricts"
+                            style="@style/TextViewNormalBlackOneLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <include
+                        layout="@layout/loading_small"/>
+
+            </ViewFlipper>
+
+            <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+                                                          android:layout_height="wrap_content"
+                                                          android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        style="@style/BaseTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            style="@style/TextViewNormalBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                    android:text="@string/phone_area_id"
+                    android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/company_phone"
+                        style="@style/BaseTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPhone"
+                            style="@style/TextViewNormalBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+                                                          android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        style="@style/BaseTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            style="@style/TextViewNormalBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:text="@string/phone_area_id"
+                            android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/company_fax"
+                        style="@style/BaseTextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etFax"
+                            style="@style/TextViewNormalBlack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            
+            <Space android:layout_width="match_parent" android:layout_height="20dp"/>
+
+            <include
+                    android:id="@+id/include_btn_add_company"
+                    layout="@layout/loading_button_green"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

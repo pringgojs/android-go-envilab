@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_form"
+        android:background="@drawable/bg_square"
+        android:layout_marginTop="@dimen/padding_form"
+        android:layout_marginBottom="10dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/TextViewSmallBlack"
+            android:text="@string/progress_last_three_months"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBtc"
+            style="@style/TextViewSmallGray"
+            android:text="@string/btc"
+            android:layout_below="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textview_black_2"
+            android:paddingRight="5dp"
+            android:paddingEnd="5dp"
+            android:layout_centerHorizontal="true"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/chartLine"
+            android:layout_below="@+id/tvBtc"/>
+
+</RelativeLayout>

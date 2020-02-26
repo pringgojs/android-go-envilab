@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ViewFlipper
+            android:id="@+id/vf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <HorizontalScrollView
+                android:id="@+id/layoutChip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_chip"
+                android:padding="@dimen/padding_chip_group"
+                android:scrollbars="none">
+
+            <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:chipSpacing="@dimen/chip_spacing"/>
+
+        </HorizontalScrollView>
+
+        <include
+            layout="@layout/loading"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRetry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/ButtonRed"
+                android:text="@string/try_again"
+                android:layout_gravity="center"/>
+
+    </ViewFlipper>
+
+<androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/fragmentPlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

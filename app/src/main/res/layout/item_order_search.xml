@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_form"
+        android:paddingRight="@dimen/padding_form"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/ripple">
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                style="@style/TextViewSmallGray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 November 2019"
+                android:textSize="10sp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNumber"
+                style="@style/TextViewSmallGray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="123/2019/x91vva"
+                android:gravity="end"
+                android:paddingLeft="@dimen/padding_line"
+                android:textSize="10sp"
+                android:layout_toRightOf="@+id/tvDate"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                android:layout_toLeftOf="@+id/tvPrice"
+                style="@style/TextViewSmallBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PT. Media Baru Digital"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCity"
+                style="@style/TextViewSmallGray"
+                android:layout_toLeftOf="@+id/tvPrice"
+                android:layout_below="@+id/tvName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Surabaya, Jawa Timur"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPrice"
+                style="@style/TextViewNormalBlackOneLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:text="2,700,000"
+                android:textColor="@color/button_red"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.chip.Chip
+            android:id="@+id/chipStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:chipMinHeight="0dp"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:textAppearance="@style/SearchChip"
+            android:clickable="false"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

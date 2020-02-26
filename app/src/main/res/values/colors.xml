@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <!--<color name="colorPrimaryDark">@android:color/black</color>-->
+    <color name="colorPrimaryDark">#0F4B79</color>
+    <color name="colorAccent">#629C44</color>
+    <color name="icons">#C0C0C0</color>
+    <color name="gray_bottom_menu">#EBEBEB</color>
+    <color name="black_2">#232323</color>
+    <color name="blue_link">#4DD7FA</color>
+    <color name="status_sampling">#FEE3AE</color>
+    <color name="orange">#fb8c00</color>
+    <color name="status_request">#CCD1D0</color>
+    <color name="status_complete">#8CB06E</color>
+    <color name="textview_gray">#AAAAAA</color>
+    <color name="textview_gray_2">#8CAAAAAA</color>
+    <color name="textview_black">#232323</color>
+    <color name="textview_black_2">#A6232323</color>
+    <color name="edittext_line">#D6D6D6</color>
+    <color name="button_red">#E61611</color>
+    <color name="button_green">#629C44</color>
+    <color name="button_blue">#2196F3</color>
+    <color name="image_taken">#D0D2D3</color>
+    <color name="chip_text">#6D6E70</color>
+    <color name="bg_chip">#F9FAFB</color>
+    <color name="bg_chip_2">#FAFAFA</color>
+    <color name="icon_blue">#116EAB</color>
+    <color name="white_transparent">#40FFFFFF</color>
+    <color name="top_menu_shadow">#40232323</color>
+</resources>
+
+        <!--100% — FF-->
+        <!--95% — F2-->
+        <!--90% — E6-->
+        <!--85% — D9-->
+        <!--80% — CC-->
+        <!--75% — BF-->
+        <!--70% — B3-->
+        <!--65% — A6-->
+        <!--60% — 99-->
+        <!--55% — 8C-->
+        <!--50% — 80-->
+        <!--45% — 73-->
+        <!--40% — 66-->
+        <!--35% — 59-->
+        <!--30% — 4D-->
+        <!--25% — 40-->
+        <!--20% — 33-->
+        <!--15% — 26-->
+        <!--10% — 1A-->
+        <!--5% — 0D-->
+        <!--0% — 00-->

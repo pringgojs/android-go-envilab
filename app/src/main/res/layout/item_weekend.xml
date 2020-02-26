@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingTop="5dp"
+              android:paddingBottom="5dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/TextViewNormalGrayOneLine"
+            android:textColor="@color/button_red"
+            android:gravity="center|end" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDayName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            style="@style/TextViewNormalGrayOneLine"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"/>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include
+            android:id="@+id/include_toolbar"
+            layout="@layout/layout_toolbar"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextViewNormalBlack"
+            android:padding="@dimen/padding_form"
+            android:background="@color/bg_chip"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include_toolbar"/>
+
+    <com.envilabindonesia.android.base.view.BaseWebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="7.5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubject"
+            app:layout_constraintBottom_toTopOf="@+id/layoutButton"/>
+
+    <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/layoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/padding_form"
+            android:paddingRight="@dimen/padding_form"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <include
+                android:id="@+id/includeButton"
+                layout="@layout/loading_button_red"/>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

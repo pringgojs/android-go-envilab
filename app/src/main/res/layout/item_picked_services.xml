@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/recyclerview_separator">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tvTotal"
+            android:paddingTop="10dp"
+            android:paddingLeft="@dimen/padding_form"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp"
+            android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                style="@style/TextViewNormalBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                tools:text="Udara Ambient"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRegulation"
+                style="@style/TextViewSmallBlackOneLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textview_black"
+                tools:text="Pergub Jatim 10/2009 (Ambient)"
+                android:paddingBottom="2dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvParameter"
+                style="@style/TextViewSmallGrayOneLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:textColor="@color/textview_black_2"
+                tools:text="SO2, CO, NO2, O3, Debu, Pb, H2S, NH3, HC"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextViewSmallGrayOneLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_notes"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNotes"
+                    style="@style/TextViewSmallGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPrice"
+                style="@style/TextViewNormalBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                tools:text="Rp 750.000"
+                android:visibility="gone"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTotal"
+            style="@style/TextViewNormalGray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textview_black_2"
+            android:padding="5dp"
+            android:background="@drawable/btn_icon_filled_gray"
+            android:gravity="center"
+            android:text="1"
+            tools:text="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/padding_form"
+            android:layout_alignLeft="@+id/layout_option"
+            android:layout_alignRight="@+id/layout_option"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvTotal"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:paddingRight="@dimen/padding_form">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_edit"
+                android:padding="10dp"
+                android:background="@drawable/btn_icon"/>
+
+        <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete"
+                android:padding="10dp"
+                android:background="@drawable/btn_icon"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/edittext_line"
+          android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
